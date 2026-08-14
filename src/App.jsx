@@ -1,0 +1,50 @@
+import React from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import ScrollToTop from "./components/layout/ScrollToTop";
+import PageTransition from "./components/layout/PageTransition";
+
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import Work from "./pages/Work";
+import CaseStudy from "./pages/CaseStudy";
+import About from "./pages/About";
+import Industries from "./pages/Industries";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+
+export default function App() {
+  const location = useLocation();
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background text-on-background selection:bg-primary selection:text-on-primary">
+      <ScrollToTop />
+      <Navbar />
+      
+      <div className="flex-grow">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            {/* Main Routes */}
+            <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+            <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+            <Route path="/services/:serviceId" element={<PageTransition><ServiceDetail /></PageTransition>} />
+            <Route path="/work" element={<PageTransition><Work /></PageTransition>} />
+            <Route path="/work/:projectId" element={<PageTransition><CaseStudy /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+            <Route path="/industries" element={<PageTransition><Industries /></PageTransition>} />
+            <Route path="/solutions" element={<Navigate to="/industries" replace />} />
+            <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+            
+            {/* Fallback */}
+            <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+          </Routes>
+        </AnimatePresence>
+      </div>
+
+      <Footer />
+    </div>
+  );
+}
