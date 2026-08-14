@@ -58,8 +58,8 @@ export default {
         "surface-border": "#E5E5E5",
         "body-text": "#333333",
         "surface-secondary": "#F5F5F5",
-        "accent-blue-soft": "#E6F0FF",
-        "accent": "#0066FF",
+        "accent-blue-soft": "#F0F0F0",
+        "accent": "#000000",
       },
       borderRadius: {
         "DEFAULT": "0.5rem",
