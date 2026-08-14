@@ -65,37 +65,40 @@ body {
 
 /* Service Card Hover State */
 .service-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease, background-color 0.4s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.06);
-  border-color: #111111;
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.1);
+  border-color: #000000;
+  background-color: #f7f7f7;
 }
 
 /* Image Hover Zoom Container */
 .image-hover-zoom {
   overflow: hidden;
+  background-color: #000000;
 }
 
 .image-hover-zoom img {
-  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.8s ease;
 }
 
 .card-container:hover .image-hover-zoom img {
-  transform: scale(1.04);
+  transform: scale(1.08) rotate(-1deg);
+  opacity: 0.85;
 }
 
 /* Interactive Bento Element */
 .interactive-element {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .interactive-element:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.05);
-  border-color: #111111;
+  transform: perspective(1000px) translateZ(20px) translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+  border-color: #000000;
 }
 
 /* Material Symbols alignment helper */
