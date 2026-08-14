@@ -79,11 +79,11 @@ export default function AnimatedHeroGraphic() {
           </div>
           
           {/* Mock UI Graph */}
-          <div className="flex-1 w-full bg-gradient-to-tr from-primary/10 to-transparent rounded-xl border border-white/5 relative overflow-hidden mb-4 flex items-end p-4 gap-2">
-             <motion.div animate={{ height: ["40%", "70%", "40%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="flex-1 bg-primary/40 rounded-t-sm"></motion.div>
-             <motion.div animate={{ height: ["60%", "40%", "60%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="flex-1 bg-primary/60 rounded-t-sm"></motion.div>
-             <motion.div animate={{ height: ["80%", "50%", "80%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="flex-1 bg-accent/60 rounded-t-sm"></motion.div>
-             <motion.div animate={{ height: ["50%", "90%", "50%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="flex-1 bg-primary rounded-t-sm"></motion.div>
+          <div className="flex-1 w-full bg-surface/50 rounded-xl border border-outline-variant/30 relative overflow-hidden mb-4 flex items-end p-4 gap-3">
+             <motion.div animate={{ height: ["40%", "70%", "40%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="flex-1 bg-outline-variant/50 rounded-t-md"></motion.div>
+             <motion.div animate={{ height: ["60%", "40%", "60%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="flex-1 bg-outline/50 rounded-t-md"></motion.div>
+             <motion.div animate={{ height: ["80%", "50%", "80%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="flex-1 bg-secondary/70 rounded-t-md"></motion.div>
+             <motion.div animate={{ height: ["50%", "90%", "50%"] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="flex-1 bg-primary rounded-t-md shadow-lg shadow-primary/10"></motion.div>
           </div>
 
           {/* Mock UI Footer */}
@@ -100,7 +100,7 @@ export default function AnimatedHeroGraphic() {
           className="absolute z-30 left-[5%] top-[20%] w-32 md:w-40 h-32 md:h-40 bg-surface-bright/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl p-4 flex flex-col gap-3"
           style={{ transform: "translateZ(80px)" }}
         >
-          <div className="w-full h-1/2 bg-accent/20 rounded-lg border border-accent/10"></div>
+          <div className="w-full h-1/2 bg-outline-variant/30 rounded-lg border border-outline-variant/20"></div>
           <div className="w-3/4 h-3 bg-secondary/30 rounded-full"></div>
           <div className="w-1/2 h-3 bg-secondary/20 rounded-full"></div>
         </motion.div>
@@ -112,7 +112,7 @@ export default function AnimatedHeroGraphic() {
           className="absolute z-10 right-[5%] bottom-[15%] w-36 md:w-48 h-24 bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl p-4 flex items-center gap-4"
           style={{ transform: "translateZ(30px)" }}
         >
-          <div className="w-12 h-12 rounded-full border-4 border-primary/30 border-t-primary animate-spin"></div>
+          <div className="w-12 h-12 rounded-full border-4 border-outline-variant/30 border-t-primary animate-spin"></div>
           <div className="flex-1 space-y-2">
             <div className="w-full h-2 bg-secondary/30 rounded-full"></div>
             <div className="w-4/5 h-2 bg-secondary/20 rounded-full"></div>
@@ -129,7 +129,7 @@ export default function AnimatedHeroGraphic() {
         <motion.div 
           animate={{ rotateZ: -360 }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="absolute z-0 w-[90%] h-[90%] border-[1px] border-accent/20 rounded-full"
+          className="absolute z-0 w-[90%] h-[90%] border-[1px] border-outline/30 rounded-full"
           style={{ transform: "translateZ(-10px)" }}
         />
 
