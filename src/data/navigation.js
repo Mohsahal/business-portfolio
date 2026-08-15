@@ -19,7 +19,6 @@ export const footerLinks = {
   ],
   social: [
     { name: "LinkedIn", href: "https://linkedin.com/company/infob", external: true },
-    { name: "Instagram", href: "https://instagram.com/infob", external: true },
-    { name: "GitHub", href: "https://github.com/infob", external: true },
+    { name: "Instagram", href: "https://www.instagram.com/infob.studio/", external: true },
   ]
 };
