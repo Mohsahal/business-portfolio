@@ -15,7 +15,12 @@ export default function ContactForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "phone") {
+      const numericValue = value.replace(/\D/g, "").slice(0, 10);
+      setFormData((prev) => ({ ...prev, [name]: numericValue }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -122,14 +127,18 @@ export default function ContactForm() {
             </div>
             <div>
               <label className={labelStyles}>Phone / WhatsApp</label>
-              <input
-                type="number"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="+91 1234567890"
-                className={inputStyles}
-              />  
+              <div className="relative flex items-center">
+                <span className="absolute left-4 text-on-surface font-body-md font-medium border-r border-outline-variant/50 pr-3">+91</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="1234567890"
+                  pattern="[0-9]{10}"
+                  className={`${inputStyles} pl-[4.5rem]`}
+                />  
+              </div>
             </div>
           </div>
 
