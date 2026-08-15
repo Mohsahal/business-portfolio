@@ -55,7 +55,7 @@ export default function ProjectBento() {
             tiltAmount={4}
           >
             <Link to={`/work/${project.id}`}>
-              <div className={`image-hover-zoom bg-surface-container-low mb-6 ${project.imageHeight || 'h-[400px]'} w-full rounded-DEFAULT border border-outline-variant/30 overflow-hidden`}>
+              <div className={`image-hover-zoom bg-surface-container-low mb-6 h-[300px] sm:h-[350px] md:h-[400px] w-full rounded-DEFAULT border border-outline-variant/30 overflow-hidden`}>
                 <img
                   className="w-full h-full object-cover rounded-DEFAULT"
                   src={project.image}

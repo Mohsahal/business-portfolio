@@ -32,7 +32,7 @@ export default function CaseStudy() {
           ))}
         </div>
 
-        <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-h1 text-primary font-bold tracking-tight mb-8">
+        <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-6xl lg:text-[80px] text-primary font-bold tracking-tight mb-8">
           {project.title}
         </h1>
 
@@ -53,7 +53,7 @@ export default function CaseStudy() {
         </div>
 
         {/* Project Metadata bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 border-y border-outline-variant py-6 mt-12 font-body-md">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 border-y border-outline-variant py-6 mt-12 font-body-md">
           <div>
             <div className="font-label-caps text-xs text-outline mb-1 uppercase">Client</div>
             <div className="font-semibold text-primary">{project.client}</div>

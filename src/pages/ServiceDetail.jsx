@@ -112,7 +112,7 @@ export default function ServiceDetail() {
         <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap border-t border-outline-variant pt-20">
           <div className="mb-12">
             <Badge className="mb-4">Proven Results</Badge>
-            <h2 className="font-h2-mobile md:font-h2 text-2xl md:text-4xl text-primary font-bold">
+            <h2 className="font-h1-mobile md:font-h2 text-2xl md:text-4xl text-primary font-bold">
               Related Case Studies
             </h2>
           </div>
@@ -147,7 +147,7 @@ export default function ServiceDetail() {
 
       {/* Direct Service CTA */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div className="bg-primary text-on-primary rounded-lg p-10 md:p-16 text-center">
+        <div className="bg-primary text-on-primary rounded-lg px-6 py-10 md:p-16 text-center">
           <h2 className="font-h2 text-2xl md:text-4xl font-bold mb-4">
             Need {service.title} for your enterprise?
           </h2>

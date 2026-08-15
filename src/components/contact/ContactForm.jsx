@@ -65,13 +65,13 @@ export default function ContactForm() {
   const labelStyles = "font-label-caps text-xs text-secondary font-semibold uppercase tracking-wider block mb-2";
 
   return (
-    <div className="bg-surface-container-lowest border border-outline-variant/30 p-8 md:p-14 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-500">
+    <div className="bg-surface-container-lowest border border-outline-variant/30 p-6 sm:p-8 md:p-14 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-500">
       {status === "success" ? (
         <div className="text-center py-16 space-y-8 animate-in fade-in duration-500">
           <div className="w-20 h-20 bg-surface-bright border border-outline-variant/40 rounded-full flex items-center justify-center mx-auto text-primary">
             <span className="material-symbols-outlined text-4xl">check</span>
           </div>
-          <h3 className="font-h2-mobile md:font-h2 text-3xl font-bold text-primary tracking-tight">
+          <h3 className="font-h1-mobile md:font-h2 text-3xl md:text-4xl font-bold text-primary tracking-tight">
             Inquiry Received
           </h3>
           <p className="font-body-lg text-secondary max-w-md mx-auto text-balance">
@@ -159,7 +159,7 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <label className={labelStyles}>Budget Range</label>
             <div className="flex flex-wrap gap-3 mt-2">
               {["<$10k", "$10k - $50k", "$50k+"].map((tier) => (
@@ -177,7 +177,7 @@ export default function ContactForm() {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div>
             <label className={labelStyles}>Project Details</label>

@@ -7,7 +7,7 @@ export default function Work() {
     <main className="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-section-gap pt-32">
       {/* Hero Header */}
       <header className="mb-section-gap max-w-4xl pt-8 md:pt-16">
-        <h1 className="font-hero-mobile text-hero-mobile md:font-hero-md md:text-hero-md text-primary mb-6 font-bold tracking-tight">
+        <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-6xl lg:text-[80px] text-primary mb-6 font-bold tracking-tight">
           Selected work
         </h1>
         <p className="font-subheading text-subheading text-secondary">
@@ -19,7 +19,7 @@ export default function Work() {
       <ProjectBento />
 
       {/* Call to Action Section */}
-      <section className="p-20 border-t border-outline-variant/30 flex flex-col items-center text-center">
+      <section className="px-6 py-16 md:p-20 border-t border-outline-variant/30 flex flex-col items-center text-center">
         <h2 className="font-h2 text-3xl md:text-5xl text-primary font-bold mb-6 tracking-tight">
           Ready to build something real?
         </h2>

@@ -13,7 +13,7 @@ export default function About() {
     <main className="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
       {/* Hero Section */}
       <section className="mb-section-gap pt-8 md:pt-16">
-        <h1 className="font-hero-mobile text-hero-mobile md:font-hero-md md:text-hero-md text-primary max-w-5xl mb-8 font-bold tracking-tight">
+        <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-6xl lg:text-[80px] leading-tight text-primary max-w-5xl mb-8 font-bold tracking-tight">
           We believe technology should make businesses better.
         </h1>
         <p className="font-body-md text-body-md text-secondary max-w-3xl leading-relaxed">
@@ -60,13 +60,13 @@ export default function About() {
 
       {/* Why INFOB */}
       <section className="mb-section-gap">
-        <h2 className="font-h2-mobile text-h2-mobile md:font-h2 md:text-h2 text-primary mb-16 border-b border-surface-variant pb-6 font-bold tracking-tight">
+        <h2 className="font-h1-mobile text-3xl md:font-h2 md:text-h2 text-primary mb-16 border-b border-surface-variant pb-6 font-bold tracking-tight">
           Why INFOB?
         </h2>
 
         <div className="space-y-12">
           <div className="flex flex-col md:flex-row gap-8 items-start border-b border-surface-variant pb-12">
-            <div className="font-h1-mobile text-2xl md:text-4xl font-bold text-primary md:w-1/2">
+            <div className="font-h1-mobile text-3xl md:text-4xl font-bold text-primary md:w-1/2">
               Business First
             </div>
             <div className="md:w-1/2 pt-2 md:pt-4">
@@ -77,7 +77,7 @@ export default function About() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 items-start border-b border-surface-variant pb-12">
-            <div className="font-h1-mobile text-2xl md:text-4xl font-bold text-primary md:w-1/2">
+            <div className="font-h1-mobile text-3xl md:text-4xl font-bold text-primary md:w-1/2">
               Engineering Excellence
             </div>
             <div className="md:w-1/2 pt-2 md:pt-4">
@@ -88,7 +88,7 @@ export default function About() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 items-start border-b border-surface-variant pb-12">
-            <div className="font-h1-mobile text-2xl md:text-4xl font-bold text-primary md:w-1/2">
+            <div className="font-h1-mobile text-3xl md:text-4xl font-bold text-primary md:w-1/2">
               Modern Design
             </div>
             <div className="md:w-1/2 pt-2 md:pt-4">
@@ -99,7 +99,7 @@ export default function About() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 items-start pb-12">
-            <div className="font-h1-mobile text-2xl md:text-4xl font-bold text-primary md:w-1/2">
+            <div className="font-h1-mobile text-3xl md:text-4xl font-bold text-primary md:w-1/2">
               AI Ready
             </div>
             <div className="md:w-1/2 pt-2 md:pt-4">
@@ -113,7 +113,7 @@ export default function About() {
 
       {/* Industries We Serve */}
       <section className="mb-section-gap">
-        <h2 className="font-h2-mobile text-h2-mobile md:font-h2 md:text-h2 text-primary mb-12 font-bold tracking-tight">
+        <h2 className="font-h1-mobile text-3xl md:font-h2 md:text-h2 text-primary mb-12 font-bold tracking-tight">
           Industries We Serve
         </h2>
         <div className="flex flex-col border-t border-surface-variant">

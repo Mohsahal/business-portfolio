@@ -8,7 +8,7 @@ export default function Contact() {
         {/* Left Side: Header & Contact Info */}
         <div className="lg:col-span-5 flex flex-col justify-start">
           <div className="mb-12">
-            <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-5xl lg:text-6xl text-primary font-bold tracking-tight mb-8">
+            <h1 className="font-hero-mobile text-5xl md:font-h1 md:text-6xl lg:text-7xl text-primary font-bold tracking-tight mb-8">
               Have an idea?<br className="hidden sm:inline" /> Let's build it.
             </h1>
             <p className="font-body-lg text-body-lg text-secondary max-w-md leading-relaxed">
