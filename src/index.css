@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/50 backdrop-blur-2xl border border-white/60 shadow-[0_8px_40px_rgba(0,0,0,0.04)];
+  }
+  .glass-panel-heavy {
+    @apply bg-white/70 backdrop-blur-3xl border border-white/60 shadow-lg;
+  }
+}
+
 :root {
   --color-white: #FFFFFF;
   --color-black: #111111;
@@ -33,6 +42,10 @@
 body {
   font-family: var(--font-family);
   background-color: var(--color-background);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(200, 200, 200, 0.25), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(220, 220, 220, 0.3), transparent 25%);
+  background-attachment: fixed;
   color: #1a1c1c;
   overflow-x: hidden;
 }

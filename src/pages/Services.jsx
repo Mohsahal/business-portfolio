@@ -65,7 +65,7 @@ export default function Services() {
           <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border border-outline-variant relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent z-10 pointer-events-none"></div>
             <img
-              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop"
+              src="/images/services-hero.jpg"
               alt="Abstract digital mesh representing technology services"
               className="w-full h-full object-cover"
             />

@@ -80,8 +80,8 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-20 left-4 right-4 pointer-events-auto bg-white/95 backdrop-blur-3xl border border-outline-variant/30 p-6 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] animate-in fade-in slide-in-from-top-4 duration-300">
-          <div className="flex flex-col space-y-2">
+        <div className="md:hidden absolute top-[calc(100%+16px)] left-4 right-4 pointer-events-auto bg-white rounded-2xl border border-outline-variant px-6 py-6 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="flex flex-col space-y-4">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path || 
                 (link.path !== "/" && location.pathname.startsWith(link.path));
@@ -89,20 +89,20 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-lg py-3 px-4 rounded-2xl transition-colors ${
-                    isActive ? "font-bold text-primary bg-surface-container-low" : "text-secondary font-medium hover:text-primary hover:bg-surface-bright"
+                  className={`text-lg py-2 border-b border-surface-variant ${
+                    isActive ? "font-bold text-primary" : "text-secondary hover:text-primary"
                   }`}
                 >
                   {link.name}
                 </Link>
               );
             })}
-            <div className="pt-6 mt-4 border-t border-outline-variant/30">
+            <div className="pt-4">
               <Link
                 to="/contact"
-                className="w-full text-center inline-flex items-center justify-center bg-primary text-on-primary px-6 py-4 rounded-full font-label-caps text-xs tracking-[0.1em] shadow-lg shadow-primary/20"
+                className="w-full text-center inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3.5 rounded-DEFAULT font-body-md text-body-md"
               >
-                START A CONVERSATION
+                Let's Talk →
               </Link>
             </div>
           </div>

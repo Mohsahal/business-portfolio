@@ -29,9 +29,9 @@ export default function FeaturedWork() {
       <div className="space-y-16">
         {/* Project 1 - Full Width */}
         {topProjects[0] && (
-          <article className="card-container group cursor-pointer border border-outline-variant/50 p-6 md:p-10 rounded-DEFAULT bg-surface-container-lowest hover:border-primary transition-all duration-300">
+          <article className="card-container group cursor-pointer border border-outline-variant/30 p-6 md:p-10 rounded-[2rem] glass-panel hover:border-primary transition-all duration-300">
             <Link to={`/work/${topProjects[0].id}`}>
-              <div className="image-hover-zoom bg-surface-container-low mb-8 h-[340px] sm:h-[460px] md:h-[580px] w-full rounded-DEFAULT border border-outline-variant/30 flex items-center justify-center overflow-hidden">
+              <div className="image-hover-zoom bg-transparent mb-8 h-[340px] sm:h-[460px] md:h-[580px] w-full rounded-[1.5rem] flex items-center justify-center overflow-hidden">
                 <img
                   className="w-full h-full object-cover"
                   src={topProjects[0].image}
@@ -68,10 +68,10 @@ export default function FeaturedWork() {
         {/* Next 2 Projects in 2 Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
           {topProjects.slice(1, 3).map((project) => (
-            <article key={project.id} className="card-container group cursor-pointer border border-outline-variant/50 p-6 md:p-8 rounded-DEFAULT bg-surface-container-lowest hover:border-primary transition-all duration-300 flex flex-col justify-between">
+            <article key={project.id} className="card-container group cursor-pointer border border-outline-variant/30 p-6 md:p-8 rounded-[2rem] glass-panel hover:border-primary transition-all duration-300 flex flex-col justify-between">
               <Link to={`/work/${project.id}`} className="flex flex-col h-full justify-between">
                 <div>
-                  <div className="image-hover-zoom bg-surface-container-low mb-6 h-[280px] md:h-[380px] w-full rounded-DEFAULT border border-outline-variant/30 overflow-hidden">
+                  <div className="image-hover-zoom bg-transparent mb-6 h-[280px] md:h-[380px] w-full rounded-[1.5rem] overflow-hidden">
                     <img
                       className="w-full h-full object-cover"
                       src={project.image}

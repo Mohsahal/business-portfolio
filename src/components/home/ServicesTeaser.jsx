@@ -52,7 +52,7 @@ export default function ServicesTeaser() {
           <motion.div key={service.id} variants={itemVariants}>
             <Link
               to={`/services/${service.id}`}
-              className="service-card border border-surface-border rounded-xl p-8 md:p-10 hover:shadow-ambient hover:-translate-y-[2px] transition-all duration-300 bg-surface-container-lowest hover:border-accent flex flex-col justify-between group h-full"
+              className="service-card border border-white/40 rounded-[2rem] p-8 md:p-10 hover:shadow-[0_16px_40px_rgba(0,0,0,0.06)] hover:-translate-y-[2px] transition-all duration-500 glass-panel hover:border-outline-variant flex flex-col justify-between group h-full"
             >
               <div>
                 <div className="flex justify-between items-start mb-12">

@@ -26,7 +26,7 @@ export default function About() {
         <div 
           className="bg-cover bg-center w-full h-[360px] sm:h-[480px] md:h-[614px] rounded-xl border border-surface-variant bg-surface-container-low"
           style={{
-            backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpqjm5nk6HQ5ai8QWNy30KCjJj0aXqF8y3EolkNVo5hY77ia7qF3orloqFZ-MJjjdkt1Trmw0slf0kZzYp0lDWNWiNxowN7N3NbI3JnMHCzgBZuj8H8d5UcB92zuQSbjghuvBIB4Dnb5yPBT3AJ486_B2MmKNpwa0gKBaZQ5xxeOe20yXAT-Ky9qiFVgZMmm63Q8JAkpRfwTjq3yxNvzcs_OMF9S2agdlqyOQpZWmIDv31FrVPAri7=s2048')`
+            backgroundImage: `url('/images/about-office.jpg')`
           }}
           aria-label="Modern minimalist architectural office space reflecting INFOB design rigor"
         ></div>

@@ -4,7 +4,7 @@ import TiltCard from "../ui/TiltCard";
 
 export default function ServiceCard({ service }) {
   return (
-    <TiltCard tiltAmount={3} innerClassName="group border border-outline-variant rounded-DEFAULT p-8 md:p-12 hover:bg-surface-bright transition-colors duration-300 relative overflow-hidden bg-surface-container-lowest flex flex-col justify-between">
+    <TiltCard tiltAmount={3} innerClassName="group glass-panel rounded-[2rem] p-8 md:p-12 hover:bg-white/60 transition-all duration-500 relative overflow-hidden flex flex-col justify-between">
       <div>
         <div className="flex justify-between items-start mb-12 md:mb-16">
           <span className="font-body-md text-body-md text-secondary font-medium">{service.number}</span>

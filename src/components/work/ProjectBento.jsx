@@ -12,7 +12,7 @@ export default function ProjectBento() {
           return (
             <TiltCard key={project.id} className="card-container md:col-span-12 group cursor-pointer" tiltAmount={2}>
               <Link to={`/work/${project.id}`}>
-                <div className="image-hover-zoom bg-surface-container-low mb-8 h-[360px] sm:h-[480px] md:h-[614px] w-full rounded-DEFAULT border border-outline-variant/30 flex items-center justify-center overflow-hidden">
+                <div className="image-hover-zoom glass-panel mb-8 h-[360px] sm:h-[480px] md:h-[614px] w-full rounded-[2rem] flex items-center justify-center overflow-hidden">
                   <img
                     className="w-full h-full object-cover rounded-DEFAULT"
                     src={project.image}
@@ -55,7 +55,7 @@ export default function ProjectBento() {
             tiltAmount={4}
           >
             <Link to={`/work/${project.id}`}>
-              <div className={`image-hover-zoom bg-surface-container-low mb-6 h-[300px] sm:h-[350px] md:h-[400px] w-full rounded-DEFAULT border border-outline-variant/30 overflow-hidden`}>
+              <div className={`image-hover-zoom glass-panel mb-6 h-[300px] sm:h-[350px] md:h-[400px] w-full rounded-[2rem] overflow-hidden`}>
                 <img
                   className="w-full h-full object-cover rounded-DEFAULT"
                   src={project.image}

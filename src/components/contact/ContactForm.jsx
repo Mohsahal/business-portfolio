@@ -8,7 +8,6 @@ export default function ContactForm() {
     email: "",
     phone: "",
     service: "",
-    budget: "$10k - $50k",
     details: ""
   });
 
@@ -55,7 +54,6 @@ export default function ContactForm() {
       email: "",
       phone: "",
       service: "",
-      budget: "$10k - $50k",
       details: ""
     });
     setStatus("idle");
@@ -125,13 +123,13 @@ export default function ContactForm() {
             <div>
               <label className={labelStyles}>Phone / WhatsApp</label>
               <input
-                type="tel"
+                type="number"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+1 (555) 000-0000"
+                placeholder="+91 1234567890"
                 className={inputStyles}
-              />
+              />  
             </div>
           </div>
 

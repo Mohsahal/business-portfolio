@@ -64,7 +64,7 @@ export default function AnimatedHeroGraphic() {
         <motion.div 
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="relative z-20 w-[65%] h-[75%] bg-surface-container-lowest/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-6 flex flex-col justify-between overflow-hidden"
+          className="relative z-20 w-[65%] h-[75%] glass-panel-heavy rounded-3xl p-6 flex flex-col justify-between overflow-hidden"
           style={{ transform: "translateZ(50px)" }}
         >
           {/* Mock UI Header */}
@@ -97,19 +97,19 @@ export default function AnimatedHeroGraphic() {
         <motion.div 
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute z-30 left-[5%] top-[20%] w-32 md:w-40 h-32 md:h-40 bg-surface-bright/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl p-4 flex flex-col gap-3"
+          className="absolute z-30 left-[8%] lg:left-[5%] top-[20%] w-24 md:w-28 lg:w-40 h-24 md:h-28 lg:h-40 bg-surface-bright/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl p-3 lg:p-4 flex flex-col gap-2 lg:gap-3"
           style={{ transform: "translateZ(80px)" }}
         >
           <div className="w-full h-1/2 bg-outline-variant/30 rounded-lg border border-outline-variant/20"></div>
-          <div className="w-3/4 h-3 bg-secondary/30 rounded-full"></div>
-          <div className="w-1/2 h-3 bg-secondary/20 rounded-full"></div>
+          <div className="w-3/4 h-2 lg:h-3 bg-secondary/30 rounded-full"></div>
+          <div className="w-1/2 h-2 lg:h-3 bg-secondary/20 rounded-full"></div>
         </motion.div>
 
         {/* Floating Component Right */}
         <motion.div 
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute z-10 right-[5%] bottom-[15%] w-36 md:w-48 h-24 bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl p-4 flex items-center gap-4"
+          className="absolute z-10 right-[5%] bottom-[15%] w-36 md:w-48 h-24 glass-panel-heavy rounded-2xl p-4 flex items-center gap-4"
           style={{ transform: "translateZ(30px)" }}
         >
           <div className="w-12 h-12 rounded-full border-4 border-outline-variant/30 border-t-primary animate-spin"></div>
