@@ -69,7 +69,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden flex items-center justify-center w-10 h-10 text-primary focus:outline-none bg-white/50  border border-outline-variant/20"
+          className="md:hidden flex items-center justify-center w-10 h-10 text-primary focus:outline-none bg-white/50 rounded-full border border-outline-variant/20"
           aria-label="Toggle navigation menu"
         >
           <span className="material-symbols-outlined text-2xl leading-none">
@@ -80,7 +80,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-[calc(100%+16px)] left-4 right-4 pointer-events-auto bg-white rounded-2xl border border-outline-variant px-6 py-6 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden absolute top-[calc(100%+16px)] left-4 right-4 pointer-events-auto bg-white rounded-2xl border border-outline-variant px-6 py-6 shadow-2xl">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path || 

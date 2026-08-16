@@ -3,15 +3,15 @@ import React from 'react';
 export default function WhatsAppFloat() {
   return (
     <div className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-4 md:bottom-8 md:right-8 z-[100] group">
-      {/* Pulsing background effect */}
-      <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25 group-hover:opacity-0 transition-opacity duration-300"></div>
+      {/* Pulsing background effect (Desktop Only) */}
+      <div className="hidden md:block absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25 group-hover:opacity-0 transition-opacity duration-300"></div>
       
       {/* Main button */}
       <a
         href="https://wa.me/917306093151"
         target="_blank"
         rel="noopener noreferrer"
-        className="relative bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300 flex items-center justify-center"
+        className="relative bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-lg md:hover:scale-110 md:hover:shadow-2xl transition-transform duration-300 flex items-center justify-center"
         aria-label="Chat on WhatsApp"
       >
         <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8" fill="currentColor">
