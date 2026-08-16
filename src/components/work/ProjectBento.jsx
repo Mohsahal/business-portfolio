@@ -1,86 +1,59 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
-import TiltCard from "../ui/TiltCard";
 
 export default function ProjectBento() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter gap-y-24">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
       {projects.map((project, index) => {
-        if (index === 0) {
-          // Featured Project (Full Width)
-          return (
-            <TiltCard key={project.id} className="card-container md:col-span-12 group cursor-pointer" tiltAmount={2}>
-              <Link to={`/work/${project.id}`}>
-                <div className="image-hover-zoom glass-panel mb-8 h-[360px] sm:h-[480px] md:h-[614px] w-full rounded-[2rem] flex items-center justify-center overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover rounded-DEFAULT"
-                    src={project.image}
-                    alt={project.alt}
-                    loading="eager"
-                  />
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
-                  <div className="md:col-span-8">
-                    <div className="flex gap-2 mb-4">
-                      {project.tags.slice(0, 2).map((tag) => (
-                        <span key={tag} className="bg-surface-bright px-3 py-1 rounded-full font-label-caps text-label-caps text-secondary border border-outline-variant/20">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <h2 className="font-h2 text-3xl md:text-5xl text-primary font-bold mb-4 tracking-tight">
-                      {project.title}
-                    </h2>
-                    <p className="font-body-lg text-body-lg text-secondary max-w-3xl">
-                      {project.shortDescription}
-                    </p>
-                  </div>
-                  <div className="md:col-span-4 md:text-right flex items-end justify-end h-full pt-4 md:pt-0">
-                    <span className="inline-flex items-center gap-2 font-body-md text-body-md text-primary font-semibold hover:opacity-80 transition-opacity">
-                      View Case Study <span className="material-symbols-outlined">arrow_forward</span>
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </TiltCard>
-          );
-        }
-
-        // Standard Bento Project
+        // First item is full width and slightly taller
+        const heightClass = index === 0 ? "h-[400px] md:h-[600px]" : "h-[350px] md:h-[500px]";
+        
         return (
-          <TiltCard 
+          <div 
             key={project.id} 
-            className={`card-container ${project.colSpan} group cursor-pointer ${project.offset || ''}`} 
-            tiltAmount={4}
+            className={`relative overflow-hidden group cursor-pointer ${project.colSpan} ${project.offset || ''}`}
           >
-            <Link to={`/work/${project.id}`}>
-              <div className={`image-hover-zoom glass-panel mb-6 h-[300px] sm:h-[350px] md:h-[400px] w-full rounded-[2rem] overflow-hidden`}>
+            <Link to={`/work/${project.id}`} className="block w-full h-full">
+              <div className={`w-full ${heightClass} relative bg-surface-container-lowest`}>
+                {/* Background Image */}
                 <img
-                  className="w-full h-full object-cover rounded-DEFAULT"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   src={project.image}
                   alt={project.alt}
-                  loading="lazy"
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
-              </div>
-              <div className="flex gap-2 mb-4">
-                {project.tags.slice(0, 2).map((tag) => (
-                  <span key={tag} className="bg-surface-bright px-3 py-1 rounded-full font-label-caps text-label-caps text-secondary border border-outline-variant/20">
-                    {tag}
+                
+                {/* Gradient Overlay for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Top Left Badge */}
+                <div className="absolute top-6 left-6 bg-white px-3 py-1 shadow-sm">
+                  <span className="font-label-caps text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest">
+                    {project.category || project.tags[0]}
                   </span>
-                ))}
+                </div>
+                
+                {/* Top Right Arrow */}
+                <div className="absolute top-6 right-6 bg-white w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-sm group-hover:bg-primary text-primary group-hover:text-white transition-colors duration-300">
+                  <span className="material-symbols-outlined text-sm md:text-base">arrow_outward</span>
+                </div>
+                
+                {/* Bottom Left Content */}
+                <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 text-white">
+                  <p className="font-mono text-xs md:text-sm text-white/70 mb-2">
+                    {project.year || "2024"}
+                  </p>
+                  <h2 className="font-h2 text-2xl md:text-4xl font-semibold mb-2 md:mb-3 tracking-tight group-hover:translate-x-2 transition-transform duration-300">
+                    {project.title}
+                  </h2>
+                  <p className="font-body-md text-sm md:text-base text-white/80 line-clamp-2 max-w-2xl group-hover:translate-x-2 transition-transform duration-300 delay-75">
+                    {project.shortDescription}
+                  </p>
+                </div>
               </div>
-              <h3 className="font-subheading text-2xl md:text-3xl text-primary font-bold mb-3">
-                {project.title}
-              </h3>
-              <p className="font-body-md text-body-md text-secondary mb-6 max-w-xl">
-                {project.shortDescription}
-              </p>
-              <span className="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:opacity-80 transition-opacity">
-                VIEW CASE STUDY <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </span>
             </Link>
-          </TiltCard>
+          </div>
         );
       })}
     </div>

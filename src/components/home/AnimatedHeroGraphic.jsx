@@ -59,8 +59,8 @@ export default function AnimatedHeroGraphic() {
           style={{ transformStyle: "preserve-3d" }}
         >
           <div className="flex justify-between items-center mb-2">
-            <div className="w-8 h-8 rounded-lg bg-surface-bright/80 flex items-center justify-center">
-              <span className="material-symbols-outlined text-[18px] text-primary">smartphone</span>
+            <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20">
+              <div className="w-2.5 h-2.5 rounded-full bg-white border-[1.5px] border-outline-variant/40 shadow-sm"></div>
             </div>
             <div className="h-2 w-12 bg-outline/30 rounded-full"></div>
           </div>

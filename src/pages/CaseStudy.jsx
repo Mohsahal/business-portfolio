@@ -54,7 +54,7 @@ export default function CaseStudy() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-DEFAULT font-label-caps text-sm tracking-wide hover:opacity-90 transition-opacity"
           >
-            View Live Demo <span className="material-symbols-outlined text-sm">open_in_new</span>
+            View Live Demo
           </a>
         </div>
 
