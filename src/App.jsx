@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <HelmetProvider>
-      <div className="min-h-screen flex flex-col bg-background text-on-background selection:bg-primary selection:text-on-primary">
+      <div className="min-h-screen flex flex-col bg-background text-on-background selection:bg-primary selection:text-on-primary overflow-x-hidden w-full relative">
         <ScrollToTop />
         <Navbar />
         
