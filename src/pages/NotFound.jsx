@@ -16,7 +16,7 @@ export default function NotFound() {
         </p>
         <Link
           to="/"
-          className="magnetic-button inline-flex items-center px-8 py-4 bg-primary text-on-primary rounded-DEFAULT font-body-md"
+          className="magnetic-button inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary rounded-DEFAULT font-body-md"
         >
           Return to Overview →
         </Link>

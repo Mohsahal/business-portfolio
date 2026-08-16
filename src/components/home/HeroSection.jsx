@@ -26,7 +26,7 @@ const itemVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen lg:min-h-[80vh] flex flex-col lg:flex-row items-start lg:items-center px-6 md:px-margin-desktop max-w-container-max mx-auto pt-28 lg:pt-34 pb-16">
+    <section className="relative min-h-screen lg:min-h-[80vh] flex flex-col lg:flex-row items-start lg:items-center px-6 md:px-margin-desktop max-w-container-max mx-auto pt-28 lg:pt-34 pb-16 overflow-hidden">
       <motion.div 
         className="w-full lg:w-[50%] flex flex-col justify-center items-start text-left pr-0 lg:pr-12 xl:pr-16 z-10"
         variants={containerVariants}

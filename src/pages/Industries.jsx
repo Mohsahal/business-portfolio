@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/seo/SEO";
 import { industries } from "../data/industries";
 import { Badge } from "../components/ui/SectionHeader";
 
 export default function Industries() {
   return (
     <main className="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+      <SEO 
+        title="Industries & Domains" 
+        description="We combine domain-specific regulatory understanding with modern cloud and AI architectures to deliver outcomes across high-stakes industries." 
+      />
       {/* Hero Section */}
-      <section className="mb-section-gap pt-8 md:pt-16 max-w-4xl">
+      <section className="mb-section-gap pt-8 md:pt-16 max-w-4xl mx-auto flex flex-col items-center text-center">
         <Badge className="mb-6">Domain Expertise</Badge>
         <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-h1 text-primary font-bold tracking-tight mb-8">
           Engineered for industry-specific complexity.

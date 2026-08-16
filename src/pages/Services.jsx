@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEO from "../components/seo/SEO";
 import { services } from "../data/services";
 import ServiceCard from "../components/services/ServiceCard";
 import ProcessTimeline from "../components/services/ProcessTimeline";
@@ -29,6 +30,10 @@ const itemVariants = {
 export default function Services() {
   return (
     <main className="pt-24 lg:pt-32 pb-section-gap">
+      <SEO 
+        title="Digital Services" 
+        description="Comprehensive digital solutions including full-stack development, mobile apps, AI automation, and spatial computing designed for enterprise." 
+      />
       {/* Hero Section */}
       <section className="relative flex flex-col lg:flex-row items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
         

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
+import SEO from "../components/seo/SEO";
 import { services } from "../data/services";
 import { projects } from "../data/projects";
 import { Badge } from "../components/ui/SectionHeader";
@@ -20,6 +21,10 @@ export default function ServiceDetail() {
 
   return (
     <main className="pt-32 pb-section-gap">
+      <SEO 
+        title={service.title} 
+        description={service.shortDescription || service.fullDescription}
+      />
       {/* Service Header */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
         <div className="max-w-4xl pt-8 md:pt-16">

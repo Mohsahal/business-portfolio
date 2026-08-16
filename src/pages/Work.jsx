@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/seo/SEO";
 import ProjectBento from "../components/work/ProjectBento";
 
 export default function Work() {
   return (
-    <main className="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-section-gap pt-32">
+    <main className="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-section-gap pt-20">
+      <SEO 
+        title="Selected Work" 
+        description="Explore our portfolio of cutting-edge web applications, mobile apps, and AI systems built for ambitious organizations." 
+      />
       {/* Hero Header */}
-      <header className="mb-section-gap max-w-4xl pt-8 md:pt-16">
-        <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-6xl lg:text-[80px] text-primary mb-6 font-bold tracking-tight">
+      <header className="mb-section-gap max-w-4xl mx-auto flex flex-col items-center text-center pt-8 md:pt-16">
+        <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-6xl lg:text-[60px] text-primary mb-6 font-bold tracking-tight">
           Selected work
         </h1>
         <p className="font-subheading text-subheading text-secondary">

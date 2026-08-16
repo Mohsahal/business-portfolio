@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
+import SEO from "../components/seo/SEO";
 import { projects } from "../data/projects";
 import { Badge } from "../components/ui/SectionHeader";
 
@@ -16,6 +17,11 @@ export default function CaseStudy() {
 
   return (
     <main className="pt-32 pb-section-gap">
+      <SEO 
+        title={`${project.title} - Case Study`} 
+        description={project.shortDescription}
+        image={project.image}
+      />
       {/* Case Study Hero */}
       <header className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-16 pt-8 md:pt-16">
         <Link

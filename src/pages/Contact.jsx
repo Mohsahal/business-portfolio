@@ -1,9 +1,14 @@
 import React from "react";
+import SEO from "../components/seo/SEO";
 import ContactForm from "../components/contact/ContactForm";
 
 export default function Contact() {
   return (
     <main className="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-padding pt-32 md:pt-40 pb-section-gap">
+      <SEO 
+        title="Contact Us" 
+        description="Ready to build something real? Get in touch with INFOB to discuss your next digital project." 
+      />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-gutter items-start">
         {/* Left Side: Header & Contact Info */}
         <div className="lg:col-span-5 flex flex-col justify-start">

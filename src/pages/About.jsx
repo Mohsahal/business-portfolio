@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/seo/SEO";
 
 export default function About() {
   const industries = [
@@ -11,6 +12,10 @@ export default function About() {
 
   return (
     <main className="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+      <SEO 
+        title="About Us" 
+        description="We are a digital product agency partnering with ambitious organizations to design and engineer systems that matter." 
+      />
       {/* Hero Section */}
       <section className="mb-section-gap pt-8 md:pt-16">
         <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-6xl lg:text-[80px] leading-tight text-primary max-w-5xl mb-8 font-bold tracking-tight">
