@@ -20,7 +20,7 @@ export default function Process() {
         <div className="relative h-[400px] lg:h-[550px] w-full rounded-3xl overflow-hidden shadow-2xl border border-outline-variant">
           <div className="absolute inset-0 bg-primary/5 mix-blend-multiply z-10 transition-colors duration-500 hover:bg-transparent"></div>
           <img 
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" 
+            src="/images/process-team.jpg" 
             alt="Engineering Process" 
             className="w-full h-full object-cover grayscale-[50%] hover:grayscale-0 transition-all duration-700"
           />
@@ -41,12 +41,12 @@ export default function Process() {
              </span>
           </div>
           
-          <h1 className="font-h1 text-5xl sm:text-6xl md:text-6xl lg:text-[72px] leading-[1.05] text-primary font-bold tracking-tighter mb-6 lg:mb-8">
+          <h1 className="font-h1 text-5xl sm:text-6xl md:text-6xl lg:text-[76px] leading-[0.95] text-primary font-bold tracking-tighter mb-6 lg:mb-8">
             The engineering <br className="hidden md:block" />
-            <span className="font-light italic text-outline/60 tracking-tight xl:whitespace-nowrap">behind excellence.</span>
+            <span className="text-outline tracking-tight">behind excellence.</span>
           </h1>
           
-          <p className="font-body-lg text-lg lg:text-xl text-secondary leading-relaxed font-light max-w-lg">
+          <p className="font-body-lg text-lg lg:text-xl text-secondary leading-relaxed max-w-lg">
             We combine rigorous software engineering principles with agile execution to deliver scalable systems that move ambitious businesses forward.
           </p>
 

@@ -4,10 +4,10 @@ import { projects } from "../../data/projects";
 
 export default function ProjectBento() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-y-20 gap-x-12 items-start">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-y-20 gap-x-12 items-start">
       {projects.map((project, index) => {
         // Use the height defined in the data, fallback to a standard height
-        const heightClass = project.imageHeight || "h-[400px] md:h-[500px]";
+        const heightClass = project.imageHeight || "h-[300px] md:h-[400px] lg:h-[500px]";
         
         return (
           <div 

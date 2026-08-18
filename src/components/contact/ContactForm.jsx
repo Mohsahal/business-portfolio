@@ -12,6 +12,14 @@ export default function ContactForm() {
   });
 
   const [status, setStatus] = useState("idle");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const servicesList = [
+    { value: "custom", label: "Custom Software Development" },
+    { value: "automation", label: "Process Automation" },
+    { value: "consulting", label: "Technical Consulting" },
+    { value: "other", label: "Other" }
+  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -143,21 +151,47 @@ export default function ContactForm() {
           <div>
             <label className={labelStyles}>Service Required</label>
             <div className="relative">
-              <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className={`${inputStyles} appearance-none bg-transparent relative z-10 cursor-pointer`}
+              <button
+                type="button"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className={`${inputStyles} flex items-center justify-between cursor-pointer w-full text-left`}
               >
-                <option disabled value="">Select a service...</option>
-                <option value="custom">Custom Software Development</option>
-                <option value="automation">Process Automation</option>
-                <option value="consulting">Technical Consulting</option>
-                <option value="other">Other</option>
-              </select>
-              <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none z-0">
-                <span className="material-symbols-outlined text-outline">expand_more</span>
-              </div>
+                <span className={formData.service ? "text-primary" : "text-outline"}>
+                  {formData.service 
+                    ? servicesList.find(s => s.value === formData.service)?.label 
+                    : "Select a service..."}
+                </span>
+                <span className={`material-symbols-outlined text-outline transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}>
+                  expand_more
+                </span>
+              </button>
+
+              {isDropdownOpen && (
+                <>
+                  <div 
+                    className="fixed inset-0 z-40" 
+                    onClick={() => setIsDropdownOpen(false)}
+                  ></div>
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-outline-variant/30 shadow-xl z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <ul className="py-2">
+                      {servicesList.map((svc) => (
+                        <li key={svc.value}>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              handleChange({ target: { name: 'service', value: svc.value }});
+                              setIsDropdownOpen(false);
+                            }}
+                            className={`w-full text-left px-5 py-3 hover:bg-[#f4f4f4] transition-colors font-body-md text-primary ${formData.service === svc.value ? 'bg-[#f4f4f4] font-medium' : ''}`}
+                          >
+                            {svc.label}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              )}
             </div>
           </div>
 

@@ -11,7 +11,7 @@ export default function Work() {
         description="Explore our portfolio of cutting-edge web applications, mobile apps, and AI systems built for ambitious organizations." 
       />
       {/* Hero Header */}
-      <header className="mb-section-gap max-w-4xl mx-auto flex flex-col items-center text-center pt-8 md:pt-16">
+      <header className="mb-16 lg:mb-20 max-w-4xl mx-auto flex flex-col items-center text-center pt-8 md:pt-16">
         <h1 className="font-hero-mobile text-hero-mobile md:font-h1 md:text-6xl lg:text-[60px] text-primary mb-6 font-bold tracking-tight">
           Selected work
         </h1>
