@@ -20,7 +20,7 @@ export default function Process() {
         <div className="relative h-[400px] lg:h-[550px] w-full rounded-3xl overflow-hidden shadow-2xl border border-outline-variant">
           <div className="absolute inset-0 bg-primary/5 mix-blend-multiply z-10 transition-colors duration-500 hover:bg-transparent"></div>
           <img 
-            src="/images/about-office.jpg" 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" 
             alt="Engineering Process" 
             className="w-full h-full object-cover grayscale-[50%] hover:grayscale-0 transition-all duration-700"
           />

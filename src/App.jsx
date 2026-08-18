@@ -6,6 +6,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import PageTransition from "./components/layout/PageTransition";
+import WhatsAppFloat from "./components/ui/WhatsAppFloat";
 
 import Home from "./pages/Home";
 import Services from "./pages/Services";
@@ -25,6 +26,7 @@ export default function App() {
       <div className="min-h-screen flex flex-col bg-background text-on-background selection:bg-primary selection:text-on-primary overflow-x-hidden w-full relative">
         <ScrollToTop />
         <Navbar />
+        <WhatsAppFloat />
         
         <div className="flex-grow">
           <AnimatePresence mode="wait">

@@ -4,7 +4,6 @@ import HeroSection from "../components/home/HeroSection";
 import ServicesTeaser from "../components/home/ServicesTeaser";
 import FeaturedWork from "../components/home/FeaturedWork";
 import WhyInfob from "../components/home/WhyInfob";
-import WhatsAppFloat from "../components/ui/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <ServicesTeaser />
       <FeaturedWork />
       <WhyInfob />
-      <WhatsAppFloat />
     </main>
   );
 }
