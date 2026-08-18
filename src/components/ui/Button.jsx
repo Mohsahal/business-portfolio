@@ -13,33 +13,6 @@ export default function Button({
   arrow = false,
   ...props
 }) {
-  const ref = useRef(null);
-  
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const springConfig = { stiffness: 400, damping: 25, mass: 0.5 };
-  const mouseXSpring = useSpring(x, springConfig);
-  const mouseYSpring = useSpring(y, springConfig);
-
-  const handleMouseMove = (e) => {
-    if (!ref.current) return;
-    const { left, top, width, height } = ref.current.getBoundingClientRect();
-    const center = { x: left + width / 2, y: top + height / 2 };
-    
-    // Magnetic pull distance
-    const pullX = (e.clientX - center.x) * 0.3; // 30% pull
-    const pullY = (e.clientY - center.y) * 0.3;
-    
-    x.set(pullX);
-    y.set(pullY);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
   const baseStyles = "inline-flex items-center justify-center font-body-md text-body-md rounded-DEFAULT transition-colors duration-300 text-center";
   
   const variants = {
@@ -73,12 +46,10 @@ export default function Button({
 
   return (
     <motion.div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{ x: mouseXSpring, y: mouseYSpring }}
       className={wrapperClass}
+      whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
       {Element}
     </motion.div>

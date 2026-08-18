@@ -80,7 +80,7 @@ export default function ServicesTeaser() {
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-label-caps text-[10.5px] tracking-wide text-secondary bg-white/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/80 shadow-[0_2px_10px_rgba(0,0,0,0.03)] group-hover:bg-white group-hover:shadow-[0_4px_15px_rgba(0,0,0,0.06)] transition-all duration-300"
+                      className="font-label-caps text-[12.5px] tracking-wide text-secondary bg-white/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/80 shadow-[0_2px_10px_rgba(0,0,0,0.03)] group-hover:bg-white group-hover:shadow-[0_4px_15px_rgba(0,0,0,0.06)] transition-all duration-300"
                     >
                       {tag}
                     </span>

@@ -64,17 +64,17 @@ export default function ContactForm() {
     setStatus("idle");
   };
 
-  const inputStyles = "w-full bg-surface-bright border border-outline-variant/50 text-on-surface rounded-lg px-4 py-4 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-300 font-body-md text-body-md placeholder:text-outline-variant";
-  const labelStyles = "font-label-caps text-xs text-secondary font-semibold uppercase tracking-wider block mb-2";
+  const inputStyles = "w-full bg-white border border-outline-variant/60 text-primary rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors font-body-md text-body-md";
+  const labelStyles = "font-label-caps text-[12px] text-primary uppercase block mb-2 font-medium tracking-wider";
 
   return (
-    <div className="bg-surface-container-lowest border border-outline-variant/30 p-6 sm:p-8 md:p-14 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-500">
+    <div className="bg-white border border-outline-variant/60 p-8 md:p-12 rounded-xl shadow-sm hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 transition-all duration-300">
       {status === "success" ? (
         <div className="text-center py-16 space-y-8 animate-in fade-in duration-500">
-          <div className="w-20 h-20 bg-surface-bright border border-outline-variant/40 rounded-full flex items-center justify-center mx-auto text-primary">
+          <div className="w-20 h-20 bg-surface-container-low border border-outline-variant/40 rounded-full flex items-center justify-center mx-auto text-primary">
             <span className="material-symbols-outlined text-4xl">check</span>
           </div>
-          <h3 className="font-h1-mobile md:font-h2 text-3xl md:text-4xl font-bold text-primary tracking-tight">
+          <h3 className="font-h2 text-3xl md:text-4xl font-bold text-primary tracking-tight">
             Inquiry Received
           </h3>
           <p className="font-body-lg text-secondary max-w-md mx-auto text-balance">
@@ -85,10 +85,10 @@ export default function ContactForm() {
           </Button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className={labelStyles}>Name *</label>
+              <label className={labelStyles}>Name</label>
               <input
                 required
                 type="text"
@@ -112,9 +112,9 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className={labelStyles}>Email *</label>
+              <label className={labelStyles}>Email</label>
               <input
                 required
                 type="email"
@@ -128,15 +128,13 @@ export default function ContactForm() {
             <div>
               <label className={labelStyles}>Phone / WhatsApp</label>
               <div className="relative flex items-center">
-                <span className="absolute left-4 text-on-surface font-body-md font-medium border-r border-outline-variant/50 pr-3">+91</span>
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="1234567890"
-                  pattern="[0-9]{10}"
-                  className={`${inputStyles} pl-[4.5rem]`}
+                  placeholder="+1 (555) 000-0000"
+                  className={inputStyles}
                 />  
               </div>
             </div>
@@ -149,42 +147,20 @@ export default function ContactForm() {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className={`${inputStyles} appearance-none cursor-pointer pr-12`}
+                className={`${inputStyles} appearance-none bg-transparent relative z-10 cursor-pointer`}
               >
-                <option value="">Select a service...</option>
-                <option value="web-development">Web Development</option>
-                <option value="mobile-development">Mobile Applications</option>
-                <option value="ai-solutions">AI & Automation</option>
-                <option value="custom-software">Custom Software Development</option>
-                <option value="cloud-devops">Cloud & DevOps</option>
-                <option value="cybersecurity">Cybersecurity & Compliance</option>
-                <option value="other">Other / Custom Strategy</option>
+                <option disabled value="">Select a service...</option>
+                <option value="custom">Custom Software Development</option>
+                <option value="automation">Process Automation</option>
+                <option value="consulting">Technical Consulting</option>
+                <option value="other">Other</option>
               </select>
-              <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+              <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none z-0">
                 <span className="material-symbols-outlined text-outline">expand_more</span>
               </div>
             </div>
           </div>
 
-          {/* <div>
-            <label className={labelStyles}>Budget Range</label>
-            <div className="flex flex-wrap gap-3 mt-2">
-              {["<$10k", "$10k - $50k", "$50k+"].map((tier) => (
-                <button
-                  type="button"
-                  key={tier}
-                  onClick={() => setFormData((prev) => ({ ...prev, budget: tier }))}
-                  className={`px-6 py-3 rounded-full font-label-caps text-xs tracking-wider transition-all duration-300 ${
-                    formData.budget === tier
-                      ? "bg-primary text-on-primary border border-primary shadow-md scale-105"
-                      : "bg-surface-bright text-secondary border border-outline-variant/50 hover:border-primary hover:text-primary"
-                  }`}
-                >
-                  {tier}
-                </button>
-              ))}
-            </div>
-          </div> */}
 
           <div>
             <label className={labelStyles}>Project Details</label>
@@ -198,7 +174,7 @@ export default function ContactForm() {
             ></textarea>
           </div>
 
-          <div className="pt-6 flex flex-col md:flex-row md:items-center gap-6">
+          <div className="pt-4">
             <Button
               type="submit"
               disabled={status === "submitting"}
@@ -206,10 +182,10 @@ export default function ContactForm() {
               arrow={status !== "submitting"}
               className="w-full md:w-auto"
             >
-              {status === "submitting" ? "Transmitting..." : "Start a Conversation"}
+              {status === "submitting" ? "Transmitting..." : "Submit Inquiry"}
             </Button>
-            <p className="font-label-caps text-[11px] text-outline tracking-widest text-center md:text-left">
-              WE TYPICALLY RESPOND WITHIN 24 HOURS. CONFIDENTIALITY GUARANTEED.
+            <p className="font-label-caps text-[12px] text-outline mt-4 text-center md:text-left tracking-widest uppercase">
+              We typically respond within 24 hours.
             </p>
           </div>
         </form>
