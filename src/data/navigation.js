@@ -1,7 +1,7 @@
 export const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Work", path: "/work" },
-  { name: "Solutions", path: "/industries" },
+  { name: "Process", path: "/process" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -10,7 +10,7 @@ export const footerLinks = {
   navigation: [
     { name: "Services", path: "/services" },
     { name: "Work", path: "/work" },
-    { name: "Solutions", path: "/industries" },
+    { name: "Process", path: "/process" },
   ],
   company: [
     { name: "About", path: "/about" },

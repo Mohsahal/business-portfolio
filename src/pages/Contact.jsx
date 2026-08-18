@@ -45,7 +45,7 @@ export default function Contact() {
 
             {/* WhatsApp Channel */}
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/917306093151"
               target="_blank"
               rel="noreferrer"
               className="flex items-center group p-4 -mx-4 rounded-DEFAULT hover:bg-surface-bright transition-colors"
@@ -70,31 +70,27 @@ export default function Contact() {
             <div className="font-semibold text-primary mb-1">Confidentiality Assured</div>
             <p>We are happy to sign standard Non-Disclosure Agreements (NDAs) prior to scoping technical IP or architectural specs.</p>
           </div>
+        </div>
 
-          <div className="mt-8 rounded-xl overflow-hidden border border-outline-variant/40 relative hidden lg:flex flex-col bg-white shadow-sm">
+        {/* Right Side: Form & Map */}
+        <div className="lg:col-span-7">
+          <ContactForm />
+          
+          {/* Map (Moved under form) */}
+          <div className="mt-12 rounded-none overflow-hidden border border-outline-variant/40 relative hidden lg:flex flex-col bg-white">
             <div className="p-6 z-10 relative">
               <div className="flex items-start gap-4">
                 <span className="material-symbols-outlined text-outline">location_on</span>
                 <div>
-                  <div className="font-label-caps text-xs text-outline mb-1 uppercase tracking-wider">Studio location</div>
-                  <div className="font-subheading text-lg font-medium text-primary">Bangalore, Karnataka, India</div>
+                  <div className="font-label-caps text-[11px] text-outline mb-1 uppercase tracking-wider">Studio location</div>
+                  <div className="font-body-md text-sm font-medium text-primary">Bangalore, Karnataka, India</div>
                 </div>
               </div>
             </div>
-            <div className="h-[250px] w-full relative">
-              <a 
-                href="https://maps.google.com/?q=Bangalore,+Karnataka,+India" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="absolute top-4 left-6 z-20 flex items-center gap-2 px-4 py-2 bg-white border border-outline-variant/50 rounded-DEFAULT text-sm font-medium hover:border-primary text-primary transition-colors shadow-sm"
-              >
-                Maps
-                <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-              </a>
+            <div className="h-[250px] w-full relative pointer-events-none overflow-hidden">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.4908535!3d12.95395998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
+                className="absolute w-full h-[400px] -top-[75px] left-0"
                 style={{ border: 0, filter: 'grayscale(1) contrast(1.1) opacity(0.7)' }} 
                 allowFullScreen="" 
                 loading="lazy" 
@@ -103,11 +99,6 @@ export default function Contact() {
               ></iframe>
             </div>
           </div>
-        </div>
-
-        {/* Right Side: Form (Bento/Card Style) */}
-        <div className="lg:col-span-7">
-          <ContactForm />
         </div>
       </div>
     </main>

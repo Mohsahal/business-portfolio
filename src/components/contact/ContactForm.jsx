@@ -64,11 +64,11 @@ export default function ContactForm() {
     setStatus("idle");
   };
 
-  const inputStyles = "w-full bg-white border border-outline-variant/60 text-primary rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors font-body-md text-body-md";
-  const labelStyles = "font-label-caps text-[12px] text-primary uppercase block mb-2 font-medium tracking-wider";
+  const inputStyles = "w-full bg-[#f4f4f4] text-primary rounded-none px-4 py-4 focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all font-body-md text-body-md placeholder:text-outline";
+  const labelStyles = "font-label-caps text-[11px] text-outline uppercase block mb-3 font-medium tracking-wider";
 
   return (
-    <div className="bg-white border border-outline-variant/60 p-8 md:p-12 rounded-xl shadow-sm hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 transition-all duration-300">
+    <div className="relative">
       {status === "success" ? (
         <div className="text-center py-16 space-y-8 animate-in fade-in duration-500">
           <div className="w-20 h-20 bg-surface-container-low border border-outline-variant/40 rounded-full flex items-center justify-center mx-auto text-primary">
@@ -175,18 +175,14 @@ export default function ContactForm() {
           </div>
 
           <div className="pt-4">
-            <Button
+            <button
               type="submit"
               disabled={status === "submitting"}
-              variant="primary"
-              arrow={status !== "submitting"}
-              className="w-full md:w-auto"
+              className="bg-[#1a1a1a] text-white px-8 py-4 text-sm font-medium flex items-center gap-2 hover:bg-black transition-colors rounded-none w-full md:w-auto justify-center"
             >
-              {status === "submitting" ? "Transmitting..." : "Submit Inquiry"}
-            </Button>
-            <p className="font-label-caps text-[12px] text-outline mt-4 text-center md:text-left tracking-widest uppercase">
-              We typically respond within 24 hours.
-            </p>
+              {status === "submitting" ? "Sending..." : "Send Message"}
+              <span className="material-symbols-outlined text-[16px] transform -rotate-45 -mt-1">send</span>
+            </button>
           </div>
         </form>
       )}

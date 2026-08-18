@@ -13,7 +13,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Work from "./pages/Work";
 import CaseStudy from "./pages/CaseStudy";
 import About from "./pages/About";
-import Industries from "./pages/Industries";
+import Process from "./pages/Process";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -36,8 +36,7 @@ export default function App() {
               <Route path="/work" element={<PageTransition><Work /></PageTransition>} />
               <Route path="/work/:projectId" element={<PageTransition><CaseStudy /></PageTransition>} />
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-              <Route path="/industries" element={<PageTransition><Industries /></PageTransition>} />
-              <Route path="/solutions" element={<Navigate to="/industries" replace />} />
+              <Route path="/process" element={<PageTransition><Process /></PageTransition>} />
               <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
               
               {/* Fallback */}
